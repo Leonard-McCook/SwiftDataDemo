@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import SwiftData
 
+
+@Model
 class Game {
     var title: String
     var developer: String
@@ -19,11 +22,11 @@ class Game {
     init(
         title: String,
         developer: String,
-        dateAdded: Date,
-        dateCompleted: Date,
-        sumamry: String,
+        dateAdded: Date = Date.now,
+        dateCompleted: Date = Date.distantFuture,
+        sumamry: String = "",
         rating: Int? = nil,
-        status: Status
+        status: Status = .inBacklog
     ) {
         self.title = title
         self.developer = developer
