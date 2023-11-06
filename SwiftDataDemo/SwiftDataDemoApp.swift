@@ -12,7 +12,7 @@ import SwiftData
 struct SwiftDataDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameListView()
         }
         .modelContainer(for: Game.self)
     }
