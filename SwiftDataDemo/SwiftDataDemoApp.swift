@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SwiftDataDemoApp: App {
@@ -13,5 +14,10 @@ struct SwiftDataDemoApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Game.self)
+    }
+    
+    init() {
+        print(URL.applicationSupportDirectory.path(percentEncoded: false))
     }
 }
