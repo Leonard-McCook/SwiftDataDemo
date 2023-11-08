@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameListView: View {
+    @State private var createNewGame = false
     var body: some View {
         NavigationStack {
             VStack {
@@ -20,12 +21,16 @@ struct GameListView: View {
             .navigationTitle("My Games")
             .toolbar {
                 Button {
-                    
+                    createNewGame = true
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .imageScale(.large)
                 }
             }
+            .sheet(isPresented: $createNewGame, content: {
+                NewGameView()
+                    .presentationDetents([.medium])
+            })
         }
     }
 }
