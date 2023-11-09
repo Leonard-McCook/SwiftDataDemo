@@ -6,18 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct GameListView: View {
+    @Query(sort: \Game.title) private var games: [Game]
     @State private var createNewGame = false
     var body: some View {
         NavigationStack {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+            List {
+                ForEach(games) { game in
+                    NavigationLink {
+                        Text(game.title)
+                    } label: {
+                        
+                    }
+
+                }
             }
-            .padding()
+            .listStyle(.plain)
             .navigationTitle("My Games")
             .toolbar {
                 Button {
@@ -37,4 +43,5 @@ struct GameListView: View {
 
 #Preview {
     GameListView()
+        .modelContainer(for: Game.self, inMemory: true)
 }
