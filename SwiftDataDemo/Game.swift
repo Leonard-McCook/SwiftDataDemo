@@ -5,7 +5,7 @@
 //  Created by Leonard McCook-Carr on 11/3/23.
 //
 
-import Foundation
+import SwiftUI
 import SwiftData
 
 
@@ -35,6 +35,17 @@ class Game {
         self.sumamry = sumamry
         self.rating = rating
         self.status = status
+    }
+    
+    var icon: Image {
+        switch status {
+        case .inBacklog:
+            Image(systemName: "gamecontroller")
+        case .inProgress:
+            Image(systemName: "hourglass.circle")
+        case .completed:
+            Image(systemName: "gamecontroller.fil")
+        }
     }
 }
 
