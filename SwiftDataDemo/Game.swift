@@ -44,7 +44,7 @@ class Game {
         case .inProgress:
             Image(systemName: "hourglass.circle")
         case .completed:
-            Image(systemName: "gamecontroller.fil")
+            Image(systemName: "checkmark.diamond.fill")
         }
     }
 }

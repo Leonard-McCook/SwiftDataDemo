@@ -18,9 +18,25 @@ struct GameListView: View {
                     NavigationLink {
                         Text(game.title)
                     } label: {
-                        
+                        HStack(spacing: 10) {
+                            game.icon
+                            VStack(alignment: .leading) {
+                                Text(game.title).font(.title2)
+                                Text(game.developer).foregroundStyle(.secondary)
+                                
+                                if let rating = game.rating {
+                                    HStack {
+                                        ForEach(0..<rating, id: \.self) { _ in
+                                        
+                                        Image(systemName: "star.fill")
+                                                .imageScale(.small)
+                                                .foregroundStyle(.yellow)
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-
                 }
             }
             .listStyle(.plain)
