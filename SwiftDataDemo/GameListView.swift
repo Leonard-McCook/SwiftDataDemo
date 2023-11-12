@@ -9,37 +9,50 @@ import SwiftUI
 import SwiftData
 
 struct GameListView: View {
+    @Environment(\.modelContext) private var context
     @Query(sort: \Game.title) private var games: [Game]
     @State private var createNewGame = false
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(games) { game in
-                    NavigationLink {
-                        Text(game.title)
-                    } label: {
-                        HStack(spacing: 10) {
-                            game.icon
-                            VStack(alignment: .leading) {
-                                Text(game.title).font(.title2)
-                                Text(game.developer).foregroundStyle(.secondary)
-                                
-                                if let rating = game.rating {
-                                    HStack {
-                                        ForEach(0..<rating, id: \.self) { _ in
+            Group {
+                if games.isEmpty {
+                    ContentUnavailableView("Add game to your list", systemImage: "xbox.logo")
+                } else {
+                    List {
+                        ForEach(games) { game in
+                            NavigationLink {
+                                Text(game.title)
+                            } label: {
+                                HStack(spacing: 10) {
+                                    game.icon
+                                    VStack(alignment: .leading) {
+                                        Text(game.title).font(.title2)
+                                        Text(game.developer).foregroundStyle(.secondary)
                                         
-                                        Image(systemName: "star.fill")
-                                                .imageScale(.small)
-                                                .foregroundStyle(.yellow)
+                                        if let rating = game.rating {
+                                            HStack {
+                                                ForEach(0..<rating, id: \.self) { _ in
+                                                    
+                                                    Image(systemName: "star.fill")
+                                                        .imageScale(.small)
+                                                        .foregroundStyle(.yellow)
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
+                        .onDelete { indexSet in
+                            indexSet.forEach { index in
+                                let game = games[index]
+                                context.delete(game)
+                            }
+                        }
                     }
+                    .listStyle(.plain)
                 }
             }
-            .listStyle(.plain)
             .navigationTitle("My Games")
             .toolbar {
                 Button {
@@ -49,10 +62,10 @@ struct GameListView: View {
                         .imageScale(.large)
                 }
             }
-            .sheet(isPresented: $createNewGame, content: {
+            .sheet(isPresented: $createNewGame) {
                 NewGameView()
                     .presentationDetents([.medium])
-            })
+            }
         }
     }
 }
