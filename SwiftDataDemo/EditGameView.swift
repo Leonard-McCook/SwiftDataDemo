@@ -19,7 +19,18 @@ struct EditGameView: View {
     @State private var dateCompleted = Date.distantPast
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Status")
+            Picker("Status", selection: $status) {
+                ForEach(Status.allCases) { status in
+                    Text(status.descr).tag(status)
+                }
+            }
+            .buttonStyle(.bordered)
+        }
+        VStack(alignment: .leading) {
+            
+        }
     }
 }
 
