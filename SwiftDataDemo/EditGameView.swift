@@ -74,6 +74,7 @@ struct EditGameView: View {
                     firstView = false
                 }
             }
+            Divider()
         }
     }
 }

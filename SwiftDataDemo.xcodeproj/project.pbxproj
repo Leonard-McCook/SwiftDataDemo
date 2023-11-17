@@ -14,6 +14,7 @@
 		D77E15EE2AF5786100A78B14 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15ED2AF5786100A78B14 /* Game.swift */; };
 		D77E15F02AFA70D700A78B14 /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15EF2AFA70D700A78B14 /* NewGameView.swift */; };
 		D77E15F22B02D51600A78B14 /* EditGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15F12B02D51600A78B14 /* EditGameView.swift */; };
+		D77E15F42B07CC6300A78B14 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15F32B07CC6300A78B14 /* RatingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D77E15ED2AF5786100A78B14 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D77E15EF2AFA70D700A78B14 /* NewGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
 		D77E15F12B02D51600A78B14 /* EditGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameView.swift; sourceTree = "<group>"; };
+		D77E15F32B07CC6300A78B14 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				D77E15E12AF5781B00A78B14 /* GameListView.swift */,
 				D77E15EF2AFA70D700A78B14 /* NewGameView.swift */,
 				D77E15F12B02D51600A78B14 /* EditGameView.swift */,
+				D77E15F32B07CC6300A78B14 /* RatingsView.swift */,
 				D77E15ED2AF5786100A78B14 /* Game.swift */,
 				D77E15E32AF5781E00A78B14 /* Assets.xcassets */,
 				D77E15E52AF5781E00A78B14 /* Preview Content */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77E15E22AF5781B00A78B14 /* GameListView.swift in Sources */,
+				D77E15F42B07CC6300A78B14 /* RatingsView.swift in Sources */,
 				D77E15E02AF5781B00A78B14 /* SwiftDataDemoApp.swift in Sources */,
 				D77E15EE2AF5786100A78B14 /* Game.swift in Sources */,
 				D77E15F22B02D51600A78B14 /* EditGameView.swift in Sources */,
