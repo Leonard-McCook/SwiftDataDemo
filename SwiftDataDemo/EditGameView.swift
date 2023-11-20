@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct EditGameView: View {
-//    let game: Game
+    @Environment(\.dismiss) private var dismiss
+    let game: Game
     @State private var status = Status.inBacklog
     @State private var rating: Int?
     @State private var title = ""
@@ -100,6 +101,33 @@ struct EditGameView: View {
         .textFieldStyle(.roundedBorder)
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            if changed {
+                Button("Update") {
+                    game.status = status
+                    game.rating = rating
+                    game.title = title
+                    game.developer = developer
+                    game.summary = summary
+                    game.dateAdded = dateAdded
+                    game.dateStarted = dateStarted
+                    game.dateCompleted = dateCompleted
+                    dismiss()
+                }
+                .buttonStyle(.borderedProminent)
+            }
+        }
+        .onAppear {
+            status = game.status
+            rating = game.rating
+            title = game.title
+            developer = game.developer
+            summary = game.summary
+            dateAdded = game.dateAdded
+            dateStarted = game.dateStarted
+            dateCompleted = game.dateCompleted
+        }
+        
     }
 }
 
