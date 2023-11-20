@@ -21,7 +21,7 @@ struct GameListView: View {
                     List {
                         ForEach(games) { game in
                             NavigationLink {
-                                Text(game.title)
+                                EditGameView(game: game)
                             } label: {
                                 HStack(spacing: 10) {
                                     game.icon
@@ -31,7 +31,7 @@ struct GameListView: View {
                                         
                                         if let rating = game.rating {
                                             HStack {
-                                                ForEach(0..<rating, id: \.self) { _ in
+                                                ForEach(1..<rating, id: \.self) { _ in
                                                     
                                                     Image(systemName: "star.fill")
                                                         .imageScale(.small)

@@ -35,20 +35,20 @@ struct EditGameView: View {
                 LabeledContent {
                     DatePicker("", selection: $dateAdded, displayedComponents: .date)
                 } label: {
-                     Text("Date Added")
+                    Text("Date Added")
                 }
                 if status == .inProgress || status == .completed {
                     LabeledContent {
-                        DatePicker("", selection: $dateStarted, displayedComponents: .date)
+                        DatePicker("", selection: $dateStarted, in: dateAdded..., displayedComponents: .date)
                     } label: {
-                         Text("Date Started")
+                        Text("Date Started")
                     }
                 }
                 if status == .completed {
                     LabeledContent {
-                        DatePicker("", selection: $dateCompleted, displayedComponents: .date)
+                        DatePicker("", selection: $dateCompleted, in: dateStarted..., displayedComponents: .date)
                     } label: {
-                         Text("Date Completed")
+                        Text("Date Completed")
                     }
                 }
             }
@@ -62,10 +62,10 @@ struct EditGameView: View {
                         // from completed to inProgress
                         dateCompleted = Date.distantPast
                     } else if newValue == .inProgress && oldValue == .inBacklog {
-                        // Game has been started
+                        // Book has been started
                         dateStarted = Date.now
                     } else if newValue == .completed && oldValue == .inBacklog {
-                        // Forgot to start game
+                        // Forgot to start book
                         dateCompleted = Date.now
                         dateStarted = dateAdded
                     } else {
@@ -127,10 +127,22 @@ struct EditGameView: View {
             dateStarted = game.dateStarted
             dateCompleted = game.dateCompleted
         }
-        
+    }
+    
+    var changed: Bool {
+        return status != game.status
+        || rating != game.rating
+        || title != game.title
+        || developer != game.developer
+        || summary != game.summary
+        || dateAdded != game.dateAdded
+        || dateStarted != game.dateStarted
+        || dateCompleted != game.dateCompleted
     }
 }
 
-#Preview {
-    EditGameView()
-}
+//#Preview {
+//    NavigationStack {
+//        EditGameView()
+//    }
+//}

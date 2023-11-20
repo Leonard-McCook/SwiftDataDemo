@@ -5,17 +5,18 @@
 //  Created by Leonard McCook-Carr on 11/3/23.
 //
 
+
 import SwiftUI
 import SwiftData
-
 
 @Model
 class Game {
     var title: String
     var developer: String
     var dateAdded: Date
+    var dateStarted: Date
     var dateCompleted: Date
-    var sumamry: String
+    var summary: String
     var rating: Int?
     var status: Status
     
@@ -23,16 +24,18 @@ class Game {
         title: String,
         developer: String,
         dateAdded: Date = Date.now,
-        dateCompleted: Date = Date.distantFuture,
-        sumamry: String = "",
+        dateStarted: Date = Date.distantPast,
+        dateCompleted: Date = Date.distantPast,
+        summary: String = "",
         rating: Int? = nil,
         status: Status = .inBacklog
     ) {
         self.title = title
         self.developer = developer
         self.dateAdded = dateAdded
+        self.dateStarted = dateStarted
         self.dateCompleted = dateCompleted
-        self.sumamry = sumamry
+        self.summary = summary
         self.rating = rating
         self.status = status
     }
@@ -58,7 +61,7 @@ enum Status: Int, Codable, Identifiable, CaseIterable {
     var descr: String {
         switch self {
         case .inBacklog:
-            "In Backlog"
+            "On Shelf"
         case .inProgress:
             "In Progress"
         case .completed:
