@@ -62,10 +62,10 @@ struct EditGameView: View {
                         // from completed to inProgress
                         dateCompleted = Date.distantPast
                     } else if newValue == .inProgress && oldValue == .inBacklog {
-                        // Book has been started
+                        // Game has been started
                         dateStarted = Date.now
                     } else if newValue == .completed && oldValue == .inBacklog {
-                        // Forgot to start book
+                        // Forgot to start game
                         dateCompleted = Date.now
                         dateStarted = dateAdded
                     } else {
