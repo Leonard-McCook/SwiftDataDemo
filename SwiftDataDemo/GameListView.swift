@@ -71,6 +71,8 @@ struct GameListView: View {
 }
 
 #Preview {
-    GameListView()
-        .modelContainer(for: Game.self, inMemory: true)
+    let preview = Preview(Game.self)
+    preview.addExamples(Game.sampleGames)
+    return GameListView()
+        .modelContainer(preview.container)
 }

@@ -141,8 +141,10 @@ struct EditGameView: View {
     }
 }
 
-//#Preview {
-//    NavigationStack {
-//        EditGameView()
-//    }
-//}
+#Preview {
+    let preview = Preview(Game.self)
+    return NavigationStack {
+        EditGameView(game: Game.sampleGames[2])
+            .modelContainer(preview.container)
+    }
+}

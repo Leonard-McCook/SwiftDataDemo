@@ -61,7 +61,7 @@ enum Status: Int, Codable, Identifiable, CaseIterable {
     var descr: String {
         switch self {
         case .inBacklog:
-            "On Shelf"
+            "In Backlog"
         case .inProgress:
             "In Progress"
         case .completed:
