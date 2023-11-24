@@ -104,7 +104,7 @@ struct EditGameView: View {
         .toolbar {
             if changed {
                 Button("Update") {
-                    game.status = status
+                    game.status = status.rawValue
                     game.rating = rating
                     game.title = title
                     game.developer = developer
@@ -118,7 +118,7 @@ struct EditGameView: View {
             }
         }
         .onAppear {
-            status = game.status
+            status = Status(rawValue: game.status)!
             rating = game.rating
             title = game.title
             developer = game.developer
@@ -130,7 +130,7 @@ struct EditGameView: View {
     }
     
     var changed: Bool {
-        return status != game.status
+        status != Status(rawValue: game.status)!
         || rating != game.rating
         || title != game.title
         || developer != game.developer

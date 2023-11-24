@@ -10,7 +10,7 @@ import SwiftData
 
 struct GameListView: View {
     @Environment(\.modelContext) private var context
-    @Query(sort: \Game.title) private var games: [Game]
+    @Query(sort: \Game.status) private var games: [Game]
     @State private var createNewGame = false
     var body: some View {
         NavigationStack {

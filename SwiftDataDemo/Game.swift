@@ -18,7 +18,7 @@ class Game {
     var dateCompleted: Date
     var summary: String
     var rating: Int?
-    var status: Status
+    var status: Status.RawValue
     
     init(
         title: String,
@@ -37,11 +37,11 @@ class Game {
         self.dateCompleted = dateCompleted
         self.summary = summary
         self.rating = rating
-        self.status = status
+        self.status = status.rawValue
     }
     
     var icon: Image {
-        switch status {
+        switch Status(rawValue: status)! {
         case .inBacklog:
             Image(systemName: "gamecontroller")
         case .inProgress:
