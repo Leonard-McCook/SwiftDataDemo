@@ -8,12 +8,22 @@
 import SwiftUI
 import SwiftData
 
+enum SortOrder: String, Identifiable, CaseIterable {
+    case status, title, developer
+    
+    var id: Self {
+        self
+    }
+}
+
 struct GameListView: View {
     @Environment(\.modelContext) private var context
     @Query(sort: \Game.status) private var games: [Game]
     @State private var createNewGame = false
+    @State private var sortOrder = SortOrder.status
     var body: some View {
         NavigationStack {
+            
             Group {
                 if games.isEmpty {
                     ContentUnavailableView("Add game to your list", systemImage: "xbox.logo")
