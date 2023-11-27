@@ -23,7 +23,12 @@ struct GameListView: View {
     @State private var sortOrder = SortOrder.status
     var body: some View {
         NavigationStack {
-            
+            Picker("", selection: $sortOrder) {
+                            ForEach(SortOrder.allCases) { sortOrder in
+                                Text("Sort by \(sortOrder.rawValue)").tag(sortOrder)
+                            }
+                        }
+                        .buttonStyle(.bordered)
             Group {
                 if games.isEmpty {
                     ContentUnavailableView("Add game to your list", systemImage: "xbox.logo")
