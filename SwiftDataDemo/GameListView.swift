@@ -17,70 +17,30 @@ enum SortOrder: String, Identifiable, CaseIterable {
 }
 
 struct GameListView: View {
-    @Environment(\.modelContext) private var context
-    @Query(sort: \Game.status) private var games: [Game]
     @State private var createNewGame = false
     @State private var sortOrder = SortOrder.status
     var body: some View {
         NavigationStack {
             Picker("", selection: $sortOrder) {
-                            ForEach(SortOrder.allCases) { sortOrder in
-                                Text("Sort by \(sortOrder.rawValue)").tag(sortOrder)
-                            }
-                        }
-                        .buttonStyle(.bordered)
-            Group {
-                if games.isEmpty {
-                    ContentUnavailableView("Add game to your list", systemImage: "xbox.logo")
-                } else {
-                    List {
-                        ForEach(games) { game in
-                            NavigationLink {
-                                EditGameView(game: game)
-                            } label: {
-                                HStack(spacing: 10) {
-                                    game.icon
-                                    VStack(alignment: .leading) {
-                                        Text(game.title).font(.title2)
-                                        Text(game.developer).foregroundStyle(.secondary)
-                                        
-                                        if let rating = game.rating {
-                                            HStack {
-                                                ForEach(1..<rating, id: \.self) { _ in
-                                                    
-                                                    Image(systemName: "star.fill")
-                                                        .imageScale(.small)
-                                                        .foregroundStyle(.yellow)
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .onDelete { indexSet in
-                            indexSet.forEach { index in
-                                let game = games[index]
-                                context.delete(game)
-                            }
-                        }
+                ForEach(SortOrder.allCases) { sortOrder in
+                    Text("Sort by \(sortOrder.rawValue)").tag(sortOrder)
+                }
+            }
+            .buttonStyle(.bordered)
+            GameList()
+                .navigationTitle("My Games")
+                .toolbar {
+                    Button {
+                        createNewGame = true
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .imageScale(.large)
                     }
-                    .listStyle(.plain)
                 }
-            }
-            .navigationTitle("My Games")
-            .toolbar {
-                Button {
-                    createNewGame = true
-                } label: {
-                    Image(systemName: "plus.circle.fill")
-                        .imageScale(.large)
+                .sheet(isPresented: $createNewGame) {
+                    NewGameView()
+                        .presentationDetents([.medium])
                 }
-            }
-            .sheet(isPresented: $createNewGame) {
-                NewGameView()
-                    .presentationDetents([.medium])
-            }
         }
     }
 }
