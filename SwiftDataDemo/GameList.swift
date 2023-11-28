@@ -10,7 +10,8 @@ import SwiftData
 
 struct GameList: View {
     @Environment(\.modelContext) private var context
-    @Query(sort: \Game.status) private var games: [Game]
+    @Query private var games: [Game]
+    
     var body: some View {
         Group {
             if games.isEmpty {
@@ -55,5 +56,10 @@ struct GameList: View {
 }
 
 #Preview {
-    GameList()
+    let preview = Preview(Game.self)
+    preview.addExamples(Game.sampleGames)
+    return NavigationStack {
+        GameList(sortOrder: .status, filterString: "")
+    }
+    .modelContainer(preview.container)
 }
