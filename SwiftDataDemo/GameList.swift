@@ -11,7 +11,22 @@ import SwiftData
 struct GameList: View {
     @Environment(\.modelContext) private var context
     @Query private var games: [Game]
-    
+    init(sortOrder: SortOrder, filterString: String) {
+            let sortDescriptors: [SortDescriptor<Game>] = switch sortOrder {
+            case .status:
+                [SortDescriptor(\Game.status), SortDescriptor(\Game.title)]
+            case .title:
+                [SortDescriptor(\Game.title)]
+            case .developer:
+                [SortDescriptor(\Game.developer)]
+            }
+            let predicate = #Predicate<Game> { game in
+                game.title.localizedStandardContains(filterString)
+                || game.developer.localizedStandardContains(filterString)
+                || filterString.isEmpty
+            }
+            _games = Query(filter: predicate, sort: sortDescriptors)
+        }
     var body: some View {
         Group {
             if games.isEmpty {

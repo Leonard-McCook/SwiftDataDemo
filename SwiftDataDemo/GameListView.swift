@@ -19,6 +19,7 @@ enum SortOrder: String, Identifiable, CaseIterable {
 struct GameListView: View {
     @State private var createNewGame = false
     @State private var sortOrder = SortOrder.status
+    @State private var filter = ""
     var body: some View {
         NavigationStack {
             Picker("", selection: $sortOrder) {
@@ -27,7 +28,8 @@ struct GameListView: View {
                 }
             }
             .buttonStyle(.bordered)
-            GameList()
+            GameList(sortOrder: sortOrder, filterString: filter)
+                .searchable(text: $filter, prompt: Text("Filter on title or developer"))
                 .navigationTitle("My Games")
                 .toolbar {
                     Button {
