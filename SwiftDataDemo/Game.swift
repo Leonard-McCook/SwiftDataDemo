@@ -19,6 +19,7 @@ class Game {
     var summary: String
     var rating: Int?
     var status: Status.RawValue
+    var recommendedBy: String = ""
     
     init(
         title: String,
@@ -28,7 +29,8 @@ class Game {
         dateCompleted: Date = Date.distantPast,
         summary: String = "",
         rating: Int? = nil,
-        status: Status = .inBacklog
+        status: Status = .inBacklog,
+        recommendedBy: String = ""
     ) {
         self.title = title
         self.developer = developer
@@ -38,6 +40,7 @@ class Game {
         self.summary = summary
         self.rating = rating
         self.status = status.rawValue
+        self.recommendedBy = recommendedBy
     }
     
     var icon: Image {
