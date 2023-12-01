@@ -14,7 +14,7 @@ struct EditGameView: View {
     @State private var rating: Int?
     @State private var title = ""
     @State private var developer = ""
-    @State private var summary = ""
+    @State private var synopsis = ""
     @State private var dateAdded = Date.distantPast
     @State private var dateStarted = Date.distantPast
     @State private var dateCompleted = Date.distantPast
@@ -92,8 +92,8 @@ struct EditGameView: View {
                 Text("Developer").foregroundStyle(.secondary)
             }
             Divider()
-            Text("Summary").foregroundStyle(.secondary)
-            TextEditor(text: $summary)
+            Text("Synopsis").foregroundStyle(.secondary)
+            TextEditor(text: $synopsis)
                 .padding(5)
                 .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color(uiColor: .tertiarySystemFill), lineWidth: 2))
         }
@@ -108,7 +108,7 @@ struct EditGameView: View {
                     game.rating = rating
                     game.title = title
                     game.developer = developer
-                    game.summary = summary
+                    game.synopsis = synopsis
                     game.dateAdded = dateAdded
                     game.dateStarted = dateStarted
                     game.dateCompleted = dateCompleted
@@ -122,7 +122,7 @@ struct EditGameView: View {
             rating = game.rating
             title = game.title
             developer = game.developer
-            summary = game.summary
+            synopsis = game.synopsis
             dateAdded = game.dateAdded
             dateStarted = game.dateStarted
             dateCompleted = game.dateCompleted
@@ -134,7 +134,7 @@ struct EditGameView: View {
         || rating != game.rating
         || title != game.title
         || developer != game.developer
-        || summary != game.summary
+        || synopsis != game.synopsis
         || dateAdded != game.dateAdded
         || dateStarted != game.dateStarted
         || dateCompleted != game.dateCompleted
