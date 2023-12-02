@@ -21,6 +21,7 @@ class Game {
     var rating: Int?
     var status: Status.RawValue
     var recommendedBy: String = ""
+    var quotes: [Quote]?
     
     init(
         title: String,
