@@ -19,6 +19,7 @@ struct EditGameView: View {
     @State private var dateStarted = Date.distantPast
     @State private var dateCompleted = Date.distantPast
     @State private var firstView = true
+    @State private var recommendedBy = ""
     
     var body: some View {
         HStack {
@@ -91,6 +92,11 @@ struct EditGameView: View {
             } label: {
                 Text("Developer").foregroundStyle(.secondary)
             }
+            LabeledContent {
+                TextField("", text: $recommendedBy)
+            } label: {
+                Text("Recommended by").foregroundStyle(.secondary)
+            }
             Divider()
             Text("Synopsis").foregroundStyle(.secondary)
             TextEditor(text: $synopsis)
@@ -112,6 +118,7 @@ struct EditGameView: View {
                     game.dateAdded = dateAdded
                     game.dateStarted = dateStarted
                     game.dateCompleted = dateCompleted
+                    game.recommendedBy = recommendedBy
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)
@@ -126,6 +133,7 @@ struct EditGameView: View {
             dateAdded = game.dateAdded
             dateStarted = game.dateStarted
             dateCompleted = game.dateCompleted
+            recommendedBy = game.recommendedBy
         }
     }
     
@@ -138,6 +146,7 @@ struct EditGameView: View {
         || dateAdded != game.dateAdded
         || dateStarted != game.dateStarted
         || dateCompleted != game.dateCompleted
+        || recommendedBy != game.recommendedBy
     }
 }
 
