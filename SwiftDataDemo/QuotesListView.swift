@@ -101,7 +101,7 @@ struct QuotesListView: View {
     let games = Game.sampleGames
     preview.addExamples(games)
     return NavigationStack {
-        QuotesListView(game: games[4])
+        QuotesListView(game: games[2])
             .navigationBarTitleDisplayMode(.inline)
             .modelContainer(preview.container)
     }
