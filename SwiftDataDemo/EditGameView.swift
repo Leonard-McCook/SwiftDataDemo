@@ -106,7 +106,7 @@ struct EditGameView: View {
                 QuotesListView(game: game)
             } label: {
                 let count = game.quotes?.count ?? 0
-                Label("\(count) Quotes", systemImage: "quote.opening")
+                Label("^[\(count) Quotes](inflect: true)", systemImage: "quote.opening")
             }
             .buttonStyle(.bordered)
             .frame(maxWidth: .infinity, alignment: .trailing)

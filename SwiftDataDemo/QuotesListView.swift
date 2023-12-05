@@ -19,8 +19,8 @@ struct QuotesListView: View {
     var body: some View {
         GroupBox {
             HStack {
-                LabeledContent("Page") {
-                    TextField("page #", text: $page)
+                LabeledContent("Chapter") {
+                    TextField("chapter #", text: $page)
                         .autocorrectionDisabled()
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 150)
