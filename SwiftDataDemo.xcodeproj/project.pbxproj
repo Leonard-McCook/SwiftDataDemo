@@ -13,6 +13,7 @@
 		D76BBCF52B1C93CB00F0B2B0 /* QuotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BBCF42B1C93CB00F0B2B0 /* QuotesListView.swift */; };
 		D76BBCF72B20B5DF00F0B2B0 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BBCF62B20B5DF00F0B2B0 /* Genre.swift */; };
 		D76BBCF92B2192FF00F0B2B0 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BBCF82B2192FF00F0B2B0 /* UIColor+Extension.swift */; };
+		D76BBCFB2B237F0100F0B2B0 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BBCFA2B237F0100F0B2B0 /* Color+Extension.swift */; };
 		D77E15E02AF5781B00A78B14 /* SwiftDataDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15DF2AF5781B00A78B14 /* SwiftDataDemoApp.swift */; };
 		D77E15E22AF5781B00A78B14 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15E12AF5781B00A78B14 /* GameListView.swift */; };
 		D77E15E42AF5781E00A78B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77E15E32AF5781E00A78B14 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		D76BBCF42B1C93CB00F0B2B0 /* QuotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesListView.swift; sourceTree = "<group>"; };
 		D76BBCF62B20B5DF00F0B2B0 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		D76BBCF82B2192FF00F0B2B0 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D76BBCFA2B237F0100F0B2B0 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		D77E15DC2AF5781B00A78B14 /* SwiftDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77E15DF2AF5781B00A78B14 /* SwiftDataDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataDemoApp.swift; sourceTree = "<group>"; };
 		D77E15E12AF5781B00A78B14 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				D76BBCF22B1AFBBB00F0B2B0 /* Quote.swift */,
 				D76BBCF62B20B5DF00F0B2B0 /* Genre.swift */,
 				D76BBCF82B2192FF00F0B2B0 /* UIColor+Extension.swift */,
+				D76BBCFA2B237F0100F0B2B0 /* Color+Extension.swift */,
 				D76BBCF42B1C93CB00F0B2B0 /* QuotesListView.swift */,
 				D77E15E32AF5781E00A78B14 /* Assets.xcassets */,
 				D77E15E52AF5781E00A78B14 /* Preview Content */,
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77E15E22AF5781B00A78B14 /* GameListView.swift in Sources */,
+				D76BBCFB2B237F0100F0B2B0 /* Color+Extension.swift in Sources */,
 				D77E15F42B07CC6300A78B14 /* RatingsView.swift in Sources */,
 				D77E15E02AF5781B00A78B14 /* SwiftDataDemoApp.swift in Sources */,
 				D76BBCF72B20B5DF00F0B2B0 /* Genre.swift in Sources */,
