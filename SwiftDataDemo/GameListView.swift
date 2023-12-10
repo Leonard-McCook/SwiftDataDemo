@@ -49,7 +49,10 @@ struct GameListView: View {
 
 #Preview {
     let preview = Preview(Game.self)
-    preview.addExamples(Game.sampleGames)
+    let games = Game.sampleGames
+    let genres = Genre.sampleGenres
+    preview.addExamples(games)
+    preview.addExamples(genres)
     return GameListView()
         .modelContainer(preview.container)
 }

@@ -23,6 +23,8 @@ class Game {
     var recommendedBy: String = ""
     @Relationship(deleteRule: .cascade)
     var quotes: [Quote]?
+    @Relationship(inverse: \Genre.games)
+    var genres: [Genre]?
     
     init(
         title: String,
