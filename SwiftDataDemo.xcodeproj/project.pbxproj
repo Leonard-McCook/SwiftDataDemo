@@ -58,6 +58,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D76BBCFE2B25A39900F0B2B0 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				D77E15E12AF5781B00A78B14 /* GameListView.swift */,
+				D77FAB4E2B154BD70060901D /* GameList.swift */,
+				D77E15EF2AFA70D700A78B14 /* NewGameView.swift */,
+				D77E15F12B02D51600A78B14 /* EditGameView.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		D76BBCFF2B25A3DE00F0B2B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D77E15ED2AF5786100A78B14 /* Game.swift */,
+				D76BBCF22B1AFBBB00F0B2B0 /* Quote.swift */,
+				D76BBCF62B20B5DF00F0B2B0 /* Genre.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D76BBD002B25A40100F0B2B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D76BBCF82B2192FF00F0B2B0 /* UIColor+Extension.swift */,
+				D76BBCFA2B237F0100F0B2B0 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D76BBD012B25A49700F0B2B0 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				D76BBCF42B1C93CB00F0B2B0 /* QuotesListView.swift */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		D76BBD022B25A7DC00F0B2B0 /* Accessory View */ = {
+			isa = PBXGroup;
+			children = (
+				D77E15F32B07CC6300A78B14 /* RatingsView.swift */,
+			);
+			path = "Accessory View";
+			sourceTree = "<group>";
+		};
 		D77E15D32AF5781B00A78B14 = {
 			isa = PBXGroup;
 			children = (
@@ -78,17 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				D77E15DF2AF5781B00A78B14 /* SwiftDataDemoApp.swift */,
-				D77E15E12AF5781B00A78B14 /* GameListView.swift */,
-				D77FAB4E2B154BD70060901D /* GameList.swift */,
-				D77E15EF2AFA70D700A78B14 /* NewGameView.swift */,
-				D77E15F12B02D51600A78B14 /* EditGameView.swift */,
-				D77E15F32B07CC6300A78B14 /* RatingsView.swift */,
-				D77E15ED2AF5786100A78B14 /* Game.swift */,
-				D76BBCF22B1AFBBB00F0B2B0 /* Quote.swift */,
-				D76BBCF62B20B5DF00F0B2B0 /* Genre.swift */,
-				D76BBCF82B2192FF00F0B2B0 /* UIColor+Extension.swift */,
-				D76BBCFA2B237F0100F0B2B0 /* Color+Extension.swift */,
-				D76BBCF42B1C93CB00F0B2B0 /* QuotesListView.swift */,
+				D76BBCFE2B25A39900F0B2B0 /* Games */,
+				D76BBD012B25A49700F0B2B0 /* Quotes */,
+				D76BBD022B25A7DC00F0B2B0 /* Accessory View */,
+				D76BBCFF2B25A3DE00F0B2B0 /* Models */,
+				D76BBD002B25A40100F0B2B0 /* Extensions */,
 				D77E15E32AF5781E00A78B14 /* Assets.xcassets */,
 				D77E15E52AF5781E00A78B14 /* Preview Content */,
 			);
