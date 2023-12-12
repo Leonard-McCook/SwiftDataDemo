@@ -27,9 +27,9 @@ struct SwiftDataDemoApp: App {
         } catch {
             fatalError("Could not configure the container")
         }
-//        let config = ModelConfiguration(url: URL.documentsDirectory.appending(path: "MyBooks.store"))
+//        let config = ModelConfiguration(url: URL.documentsDirectory.appending(path: "MyGames.store"))
 //        do {
-//            container = try ModelContainer(for: Book.self, configurations: config)
+//            container = try ModelContainer(for: Game.self, configurations: config)
 //        } catch {
 //            fatalError("Could not configure the container")
 //        }
