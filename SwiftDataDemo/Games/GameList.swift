@@ -53,6 +53,15 @@ struct GameList: View {
                                             }
                                         }
                                     }
+                                    if let genres = game.genres {
+                                        ViewThatFits {
+                                            GenresStackView(genres: genres)
+                                            ScrollView(.horizontal,
+                                                showsIndicators: false) {
+                                                GenresStackView(genres: genres)
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }

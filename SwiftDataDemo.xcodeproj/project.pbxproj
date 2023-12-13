@@ -26,6 +26,7 @@
 		D77E15F22B02D51600A78B14 /* EditGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15F12B02D51600A78B14 /* EditGameView.swift */; };
 		D77E15F42B07CC6300A78B14 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15F32B07CC6300A78B14 /* RatingsView.swift */; };
 		D77FAB4F2B154BD70060901D /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77FAB4E2B154BD70060901D /* GameList.swift */; };
+		D7A814F72B29DAF8002E9F09 /* GenresStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A814F62B29DAF8002E9F09 /* GenresStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D77E15F12B02D51600A78B14 /* EditGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGameView.swift; sourceTree = "<group>"; };
 		D77E15F32B07CC6300A78B14 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		D77FAB4E2B154BD70060901D /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
+		D7A814F62B29DAF8002E9F09 /* GenresStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				D76BBD042B27EDD300F0B2B0 /* GenresView.swift */,
 				D76BBD062B294E0100F0B2B0 /* NewGenreView.swift */,
+				D7A814F62B29DAF8002E9F09 /* GenresStackView.swift */,
 			);
 			path = Genres;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				D77E15E02AF5781B00A78B14 /* SwiftDataDemoApp.swift in Sources */,
 				D76BBCF72B20B5DF00F0B2B0 /* Genre.swift in Sources */,
 				D77E15EE2AF5786100A78B14 /* Game.swift in Sources */,
+				D7A814F72B29DAF8002E9F09 /* GenresStackView.swift in Sources */,
 				D77E15F22B02D51600A78B14 /* EditGameView.swift in Sources */,
 				D77E15F02AFA70D700A78B14 /* NewGameView.swift in Sources */,
 				D7174FFC2B0E6CA1006604DB /* PreviewContainer.swift in Sources */,
