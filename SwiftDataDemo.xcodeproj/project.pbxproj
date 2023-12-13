@@ -16,6 +16,7 @@
 		D76BBCFB2B237F0100F0B2B0 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BBCFA2B237F0100F0B2B0 /* Color+Extension.swift */; };
 		D76BBCFD2B253EA800F0B2B0 /* GenreSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BBCFC2B253EA800F0B2B0 /* GenreSamples.swift */; };
 		D76BBD052B27EDD300F0B2B0 /* GenresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BBD042B27EDD300F0B2B0 /* GenresView.swift */; };
+		D76BBD072B294E0100F0B2B0 /* NewGenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D76BBD062B294E0100F0B2B0 /* NewGenreView.swift */; };
 		D77E15E02AF5781B00A78B14 /* SwiftDataDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15DF2AF5781B00A78B14 /* SwiftDataDemoApp.swift */; };
 		D77E15E22AF5781B00A78B14 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77E15E12AF5781B00A78B14 /* GameListView.swift */; };
 		D77E15E42AF5781E00A78B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77E15E32AF5781E00A78B14 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		D76BBCFA2B237F0100F0B2B0 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		D76BBCFC2B253EA800F0B2B0 /* GenreSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSamples.swift; sourceTree = "<group>"; };
 		D76BBD042B27EDD300F0B2B0 /* GenresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresView.swift; sourceTree = "<group>"; };
+		D76BBD062B294E0100F0B2B0 /* NewGenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGenreView.swift; sourceTree = "<group>"; };
 		D77E15DC2AF5781B00A78B14 /* SwiftDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77E15DF2AF5781B00A78B14 /* SwiftDataDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataDemoApp.swift; sourceTree = "<group>"; };
 		D77E15E12AF5781B00A78B14 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D76BBD042B27EDD300F0B2B0 /* GenresView.swift */,
+				D76BBD062B294E0100F0B2B0 /* NewGenreView.swift */,
 			);
 			path = Genres;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				D77E15E22AF5781B00A78B14 /* GameListView.swift in Sources */,
 				D76BBCFB2B237F0100F0B2B0 /* Color+Extension.swift in Sources */,
 				D77E15F42B07CC6300A78B14 /* RatingsView.swift in Sources */,
+				D76BBD072B294E0100F0B2B0 /* NewGenreView.swift in Sources */,
 				D77E15E02AF5781B00A78B14 /* SwiftDataDemoApp.swift in Sources */,
 				D76BBCF72B20B5DF00F0B2B0 /* Genre.swift in Sources */,
 				D77E15EE2AF5786100A78B14 /* Game.swift in Sources */,
