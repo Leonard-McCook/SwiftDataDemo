@@ -12,25 +12,25 @@ struct GameList: View {
     @Environment(\.modelContext) private var context
     @Query private var games: [Game]
     init(sortOrder: SortOrder, filterString: String) {
-            let sortDescriptors: [SortDescriptor<Game>] = switch sortOrder {
-            case .status:
-                [SortDescriptor(\Game.status), SortDescriptor(\Game.title)]
-            case .title:
-                [SortDescriptor(\Game.title)]
-            case .developer:
-                [SortDescriptor(\Game.developer)]
-            }
-            let predicate = #Predicate<Game> { game in
-                game.title.localizedStandardContains(filterString)
-                || game.developer.localizedStandardContains(filterString)
-                || filterString.isEmpty
-            }
-            _games = Query(filter: predicate, sort: sortDescriptors)
+        let sortDescriptors: [SortDescriptor<Game>] = switch sortOrder {
+        case .status:
+            [SortDescriptor(\Game.status), SortDescriptor(\Game.title)]
+        case .title:
+            [SortDescriptor(\Game.title)]
+        case .developer:
+            [SortDescriptor(\Game.developer)]
         }
+        let predicate = #Predicate<Game> { game in
+            game.title.localizedStandardContains(filterString)
+            || game.developer.localizedStandardContains(filterString)
+            || filterString.isEmpty
+        }
+        _games = Query(filter: predicate, sort: sortDescriptors)
+    }
     var body: some View {
         Group {
             if games.isEmpty {
-                ContentUnavailableView("Add game to your list", systemImage: "xbox.logo")
+                ContentUnavailableView("Enter your first game.", systemImage: "book.fill")
             } else {
                 List {
                     ForEach(games) { game in
@@ -42,11 +42,9 @@ struct GameList: View {
                                 VStack(alignment: .leading) {
                                     Text(game.title).font(.title2)
                                     Text(game.developer).foregroundStyle(.secondary)
-                                    
                                     if let rating = game.rating {
                                         HStack {
                                             ForEach(1..<rating, id: \.self) { _ in
-                                                
                                                 Image(systemName: "star.fill")
                                                     .imageScale(.small)
                                                     .foregroundStyle(.yellow)
@@ -56,8 +54,7 @@ struct GameList: View {
                                     if let genres = game.genres {
                                         ViewThatFits {
                                             GenresStackView(genres: genres)
-                                            ScrollView(.horizontal,
-                                                showsIndicators: false) {
+                                            ScrollView(.horizontal, showsIndicators: false) {
                                                 GenresStackView(genres: genres)
                                             }
                                         }
@@ -65,6 +62,7 @@ struct GameList: View {
                                 }
                             }
                         }
+                        
                     }
                     .onDelete { indexSet in
                         indexSet.forEach { index in
@@ -85,5 +83,5 @@ struct GameList: View {
     return NavigationStack {
         GameList(sortOrder: .status, filterString: "")
     }
-    .modelContainer(preview.container)
+        .modelContainer(preview.container)
 }
