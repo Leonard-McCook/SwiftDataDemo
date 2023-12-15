@@ -1,0 +1,124 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%lld Quotes" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld Quote"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "%lld Quotes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Add Game" : {
+
+    },
+    "Back" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Chapter" : {
+
+    },
+    "chapter #" : {
+
+    },
+    "Create" : {
+
+    },
+    "Create Genre" : {
+
+    },
+    "Create new Genre" : {
+
+    },
+    "Date Added" : {
+
+    },
+    "Date Completed" : {
+
+    },
+    "Date Started" : {
+
+    },
+    "Developer" : {
+
+    },
+    "Enter your first game." : {
+
+    },
+    "Filter on title or developer" : {
+
+    },
+    "Game Title" : {
+
+    },
+    "Genres" : {
+
+    },
+    "My Games" : {
+
+    },
+    "name" : {
+
+    },
+    "New Game" : {
+
+    },
+    "New Genre" : {
+
+    },
+    "Page: %@" : {
+
+    },
+    "Quotes" : {
+
+    },
+    "Rating" : {
+
+    },
+    "Recommended by" : {
+
+    },
+    "Set the genre color" : {
+
+    },
+    "Sort by %@" : {
+
+    },
+    "Status" : {
+
+    },
+    "Synopsis" : {
+
+    },
+    "Title" : {
+
+    },
+    "Update" : {
+
+    },
+    "You need to create some genres first." : {
+
+    }
+  },
+  "version" : "1.0"
+}
