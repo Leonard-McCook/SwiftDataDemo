@@ -101,6 +101,16 @@
         }
       }
     },
+    "Completed" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completado"
+          }
+        }
+      }
+    },
     "Create" : {
       "localizations" : {
         "es-419" : {
@@ -161,6 +171,16 @@
         }
       }
     },
+    "developer" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "desarrollador"
+          }
+        }
+      }
+    },
     "Developer" : {
       "localizations" : {
         "es-419" : {
@@ -207,6 +227,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Géneros"
+          }
+        }
+      }
+    },
+    "In Backlog" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En Espera"
+          }
+        }
+      }
+    },
+    "In Progress" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En Progreso"
           }
         }
       }
@@ -311,6 +351,16 @@
         }
       }
     },
+    "status" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "estado"
+          }
+        }
+      }
+    },
     "Status" : {
       "localizations" : {
         "es-419" : {
@@ -327,6 +377,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sinopsis"
+          }
+        }
+      }
+    },
+    "title" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "título"
           }
         }
       }
